@@ -1,0 +1,107 @@
+1) Show where I am:
+$ pwd
+
+2) Create a folder:
+$ mkdir mainfolder
+
+3) Go to the folder:
+$ cd mainfolder
+
+4) Create 3 folders:
+$ mkdir thefirstfolder
+$ mkdir thesecondfolder
+$ mkdir thethirdfolder
+
+5) Go to any folder:
+$ cd thesecondfolder
+
+6) Create 5 files (3 txt, 2 json):
+$ touch thefirst.txt
+$ touch thesecond.txt
+$ touch thethird.txt
+$ touch thefourth.json
+$ touch thefifth.json
+
+7) List the contents of the folder:
+$ ls
+or:
+$ ls -a
+or:
+$ ls -l
+or:
+$ ls -la
+
+8) Open any txt file:
+$ start thefirst.txt
+
+9) Add any text in any txt file:
+$ cat >> thefirst.txt
+hello!
+glad to meet you
+or:
+$ vim thefirst.txt
+i
+hello!
+glad to meet you
+esc
+:wq
+
+10) Show the file contents:
+$ cat thefirst.txt
+
+11) Exit the folder to a higher level:
+$ cd ..
+
+12) Move any file to another folder:
+$ mv thesecondfolder/thefirst.txt thethirdfolder/thefirst.txt
+
+13) Copy any file to another folder:
+$ cp thesecondfolder/thesecond.txt thethirdfolder/thesecond.txt
+
+14) Find the file by name:
+$ find . -name "thefirst.txt"
+
+15) Delete any file:
+$ rm thesecondfolder/thefifth.json
+
+16) Output the first few lines from a text file:
+$ head -n2 thesecondfolder/thethird.txt
+
+17) Output the last few lines from a text file:
+$ tail -n2 thesecondfolder/thethird.txt 
+
+18) View the contents of a long file:
+$ less thesecondfolder/thethird.txt
+
+19) Output date and time:
+$ date
+
+20) Show page content:
+$ curl http://162.55.220.72:5005/terminal-hw-request
+
+21) Write a script that will automatically execute next actions:
+21.1) Create two folders.
+21.2) Open any folder.
+21.3) Create txt file.
+21.4) Move the file to another folder.
+$ nano script.sh
+#!/bin/bash
+mkdir folder1
+mkdir folder2
+cd folder1
+touch file.txt
+mv folder1/file.txt folder2/file.txt
+ctrl+X
+$ ./script.sh
+
+22) Show any file path:
+$ realpath thethird.txt
+
+23) Clear the file from the contents:
+$ > thethird.txt
+
+24) Find lines in files that contain a combination of letters "meet":
+$ grep -r meet .
+
+25) Find only the path and name of files whose lines contain a combination of letters "meet":
+$ grep -Rl meet .
